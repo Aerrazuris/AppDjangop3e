@@ -12,10 +12,23 @@ html_base = """
       </ul>
 """
 
+def home(request):
+    html_responsde = "<h1>la pagina de portada</h1>"
+    html_responsde = html_base  +  html_responsde
+    return HttpResponse(html_responsde);
+
+
+def contact(request):
+    html_responsde = "<h1>la pagina de contacto</h1>"
+    html_responsde = html_base  +  html_responsde
+    return HttpResponse(html_responsde);
 
 
 
-
+def about(request):
+    html_responsde = "<h1>la pagina de Acerca De</h1>"
+    html_responsde = html_base  +  html_responsde
+    return HttpResponse(html_responsde);
 
 
 
@@ -30,22 +43,3 @@ def contact(request,plantilla="contact.html"):
 
 
 
-
-
-def home(request):
-    html_responsde = "<h1>la paguina de portada</h1>"
-    html_responsde = html_base  +  html_responsde
-    return HttpResponse(html_responsde);
-
-
-def contact(request):
-    html_responsde = "<h1>la paguina de contacto</h1>"
-    html_responsde = html_base  +  html_responsde
-    return HttpResponse(html_responsde);
-
-
-
-def about(request):
-    html_responsde = "<h1>la paguina de Acerca De</h1>"
-    html_responsde = html_base  +  html_responsde
-    return HttpResponse(html_responsde);
