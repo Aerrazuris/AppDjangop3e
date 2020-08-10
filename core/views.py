@@ -10,6 +10,7 @@ html_base = """
             <l1>  <a href="/about-me/">Acerca de</a>     </l1> 
             <l1>  <a href="/contact/">Contacto</a>       </l1> 
       </ul>
+
 """
 
 def home(request):
@@ -30,6 +31,10 @@ def about(request):
     html_responsde = html_base  +  html_responsde
     return HttpResponse(html_responsde);
 
+#Template tag
+# block content
+# extends
+# url
 
 
 def home(request,plantilla="home.html"):
@@ -40,6 +45,11 @@ def about(request,plantilla="about.html"):
 
 def contact(request,plantilla="contact.html"):
     return render(request,plantilla)
+
+def portfolio(request,plantilla="portfolio.html"):
+    return render(request,plantilla)
+
+
 
 
 
